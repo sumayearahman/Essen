@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+   <androidx.appcompat.widget.Toolbar
+       android:id="@+id/toolbar"
+       android:layout_width="match_parent"
+       android:layout_height="70dp"
+       android:background="@color/colorPrimaryDark"
+       android:minHeight="?attr/actionBarSize"
+       android:textAlignment="gravity"
+       android:theme="?attr/actionBarTheme"
+       app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+       app:theme="@style/ThemeOverlay.AppCompat.Dark"
+       app:titleTextColor="@color/colorPrimaryDark">
+
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="Favourites"
+          android:textStyle="normal"
+          android:textColor="@color/colorPrimary"
+          android:textSize="30sp" />
+
+
+   </androidx.appcompat.widget.Toolbar>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="120dp"
+       android:weightSum="4"
+       android:padding="10dp"
+       android:layout_marginBottom="10dp">
+
+      <ImageView
+          android:id="@+id/image"
+          android:layout_width="80dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:src="@drawable/f"
+          android:scaleType="fitXY"/>
+
+      <LinearLayout
+          android:layout_width="250dp"
+          android:layout_height="wrap_content"
+          android:weightSum="3"
+          android:orientation="vertical">
+
+         <TextView
+             android:id="@+id/title"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginLeft="10dp"
+             android:text="The Court Yard"
+             android:textStyle="bold"
+             android:textSize="35dp"
+             android:textColor="#00ACC1"
+
+             />
+
+         <TextView
+             android:id="@+id/details"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:layout_marginLeft="10dp"
+             android:layout_marginTop="5dp"
+             android:text="Dhanmondi "
+             android:textStyle="normal"
+             android:textSize="20dp"
+             android:textColor="#070000"
+             />
+
+      </LinearLayout>
+
+
+   </LinearLayout>
+
+</LinearLayout>
