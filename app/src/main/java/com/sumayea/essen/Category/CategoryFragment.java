@@ -19,6 +19,9 @@ import com.sumayea.essen.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import technolifestyle.com.imageslider.FlipperLayout;
+import technolifestyle.com.imageslider.FlipperView;
+
 
 public class CategoryFragment extends Fragment {
 
@@ -26,6 +29,8 @@ public class CategoryFragment extends Fragment {
     RecyclerView mRecyclerview;
     Adapter catAdapter;
     List <Model> mData;
+
+    FlipperLayout flipperLayout;
 
     public CategoryFragment(){}
 
@@ -36,8 +41,24 @@ public class CategoryFragment extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_category, container, false);
 
+
+        flipperLayout=view.findViewById(R.id.flipper);
         mRecyclerview= view.findViewById(R.id.recycler_view);
         mRecyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+
+        int imagesDrawable[]= {R.drawable.c,R.drawable.d,R.drawable.e, R.drawable.f};
+
+//        String imagesDescription[]={"image 1","image 2", "image 3","image 4"};
+
+
+        for(int i=0; i<imagesDrawable.length; i++){
+
+            FlipperView flipperView = new FlipperView(getContext());
+            flipperView.setImageDrawable(imagesDrawable[i]);
+//            flipperView.setDescription(imagesDescription[i]);
+            flipperLayout.addFlipperView(flipperView);
+        }
 
 
         CatRec_Adapter catRec_adapter = new CatRec_Adapter(getContext(),mData);

@@ -28,7 +28,7 @@
             android:layout_height="60dp"
             android:layout_gravity="end"
             android:background="@android:color/transparent"
-            android:src="@drawable/search" />
+            android:src="@drawable/ic_search" />
 
         <TextView
             android:layout_width="match_parent"

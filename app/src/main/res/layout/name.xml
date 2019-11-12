@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_below="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:tabSelectedTextColor="@android:color/black"
+            app:tabTextColor="#5400ACC1"
+            >
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabCat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About"
+                android:textAllCaps="false"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabTrend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menu"
+                android:textAllCaps="false"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabOffer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Review"
+                android:textAllCaps="false"/>
+
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+
+        <androidx.viewpager.widget.ViewPager
+
+            android:id="@+id/viewPager"
+            android:layout_below="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="620dp">
+
+        </androidx.viewpager.widget.ViewPager>
+
+
+    </RelativeLayout>
+
+</ScrollView>

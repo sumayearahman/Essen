@@ -9,13 +9,15 @@
     <group android:checkableBehavior="single"
         android:id="@+id/a">
 
-        <item android:id="@+id/nav_home"
-            android:icon="@drawable/ic_home"
-            android:title="Home"/>
-
         <item android:id="@+id/nav_profile"
             android:icon="@drawable/ic_person"
-            android:title="Profile"/>
+            android:title="profile"/>
+
+
+        <item android:id="@+id/nav_reservation"
+            android:icon="@drawable/ic_bookmark"
+            android:title="my reservations"/>
+
 
 
     </group>
@@ -25,18 +27,24 @@
 
         android:id="@+id/c">
 
+        <item android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="settings"/>
 
-        <item android:id="@+id/nav_about"
-            android:icon="@drawable/about1"
-            android:title="About Us"/>
+        <item android:id="@+id/nav_rate"
+            android:icon="@drawable/ic_star"
+            android:title="settings"/>
+
 
         <item android:id="@+id/nav_help"
             android:icon="@drawable/ic_help"
-            android:title="Help"/>
+            android:title="term of use"/>
 
-        <item android:id="@+id/nav_logout"
-            android:icon="@drawable/logout"
-            android:title="Logout"/>
+        <item android:id="@+id/nav_about"
+            android:icon="@drawable/about1"
+            android:title="about us"/>
+
+
 
     </group>
 
