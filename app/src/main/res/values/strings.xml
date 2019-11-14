@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">Essen</string>
+    <string name="recent_news">Dhaka International FolkFest 2019</string>
+    <string name="in_news">Dhaka International FolkFest 2019</string>
+    <string name="publish_date">13-11-2019</string>
+    <string name="description">The Courtyard brings you a rare leisure space amidst the daily hustle and bustle. Embracing our love for food and art: The Courtyard has two elements of equal significance: an art gallery and a multi-concept restaurant.</string>
+    <string name="service">Child friendly, Accept credit cards, Parking, Air conditioning</string>
+    <string name="payment">Master card, Visa, Cash Only</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

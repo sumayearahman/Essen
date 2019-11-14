@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:textAlignment="gravity"
+        android:theme="?attr/actionBarTheme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:titleTextColor="@color/colorPrimaryDark">
+
+        <ImageButton
+
+            android:id="@+id/search"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="start"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="my reservations"
+            android:fontFamily="monospace"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="25sp" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:tabSelectedTextColor="@android:color/black"
+        app:tabTextColor="#5400ACC1"
+        >
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabCat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="upcoming"
+            android:textAllCaps="false"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabTrend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="historical"
+            android:textAllCaps="false"/>
+
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+
+        android:id="@+id/viewPager"
+        android:layout_below="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="620dp">
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/nav_view">
+
+    </FrameLayout>
+
+
+</RelativeLayout>

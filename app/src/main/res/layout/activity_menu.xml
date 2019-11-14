@@ -39,14 +39,22 @@
 
     <!--</LinearLayout>-->
 
+    <FrameLayout
+        android:id="@+id/fragment_container3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    </FrameLayout>
+
 
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
+        android:id="@+id/nav_view1"
         android:layout_width="420dp"
         android:layout_height="match_parent"
         android:background="#F8F9FA"
         android:layout_gravity="start"
-        app:menu="@menu/drawer_layout"
+        app:menu="@menu/drawer_menu"
         app:headerLayout="@layout/nav_header"/>
 
 

@@ -19,21 +19,19 @@ import java.util.List;
 
 public class JapaneseRec_Adapter extends RecyclerView.Adapter<JapaneseRec_Adapter.JapaneseHolder> {
 
-    Context c;
-    List <Model> mData;
+     Context c;
+     List <Model_J> mData;
 
-    public JapaneseRec_Adapter(Context c, List<Model>mData){
-        this.c= c;
-        this.mData= mData;
+    public JapaneseRec_Adapter(Context c, List <Model_J> mData) {
+        this.c = c;
+        this.mData = mData;
     }
-
-
 
     @NonNull
     @Override
     public JapaneseHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View v = LayoutInflater.from(c).inflate(R.layout.cat_rec_model,parent,false);
+        View v = LayoutInflater.from(c).inflate(R.layout.japanese_rec_model,parent,false);
         JapaneseHolder japaneseHolder = new JapaneseHolder(v);
 
         japaneseHolder.item.setOnClickListener(new View.OnClickListener() {
@@ -52,8 +50,8 @@ public class JapaneseRec_Adapter extends RecyclerView.Adapter<JapaneseRec_Adapte
     public void onBindViewHolder(@NonNull JapaneseHolder holder, int i) {
 
         holder.title.setText(mData.get(i).getTitle());
-        holder.subTitle.setText(mData.get(i).getTitle());
-        holder.img.setImageResource(mData.get(i).getImg());
+        holder.subTitle.setText(mData.get(i).getSubtitle());
+        holder.img.setImageResource(mData.get(i).getImage());
 
 //        Animation animation = AnimationUtils.loadAnimation(c, android.R.anim.slide_in_left);
 //        holder.itemView.setAnimation(animation);
@@ -64,6 +62,8 @@ public class JapaneseRec_Adapter extends RecyclerView.Adapter<JapaneseRec_Adapte
     public int getItemCount() {
         return mData.size();
     }
+
+
 
     public static class JapaneseHolder extends RecyclerView.ViewHolder {
 

@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MenuFragment extends Fragment {
+public class MenuFragment extends Fragment implements NavigationView.OnNavigationItemSelectedListener {
 
     private NavigationView navigationView;
 
@@ -23,76 +23,56 @@ public class MenuFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.activity_menu, container, false);
 
-//        navigationView = view.findViewById(R.id.nav_view);
-//        navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) getActivity());
+        navigationView = view.findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener)getFragmentManager());
 //
 
         return view;
     }
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
 
-//    @Override
-//    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-//        switch (menuItem.getItemId()) {
+            case R.id.nav_profile:
+                Intent intent = new Intent(getActivity(), Profile.class);
+                startActivity(intent);
+
+                break;
+
+//            case R.id.nav_reservation:
+//                intent = new Intent(getActivity(), MyReservation.class);
+//                break;
 //
-//            case R.id.nav_home:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container1, new Home()).commit();
+//
+//            case R.id.nav_settings:
+//                intent = new Intent(getActivity(), Settings.class);
+//
+//                break;
+//
+//
+//            case R.id.nav_rate:
+//                intent = new Intent(getActivity(), Rate.class);
+//
+//                break;
+//
+//
+//            case R.id.nav_help:
+//                intent = new Intent(getActivity(), TermOfUse.class);
+//
 //                break;
 //
 //            case R.id.nav_about:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container1, new AboutFragment()).commit();
+//                intent = new Intent(getActivity(), AboutUs.class);
+//
 //                break;
 //
-//
-//            case R.id.nav_profile:
-//                startActivity((new Intent(this,ProfileFragment.class)));
-//                break;
-//
-//
-//            case R.id.nav_add_case:
-//                startActivity( new Intent(this, AlarmTestActivity.class));
-//                break;
-//
-//
-//            case R.id.nav_case_history:
-//                startActivity( new Intent(this, Case_ListActivity.class));
-//                break;
-//
-//            case R.id.nav_help:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container1, new HelpFragment()).commit();
-//                break;
-//
-//            case R.id.nav_regulatory:
-//                startActivity( new Intent(this, RegulatoryActivity.class));
-//                break;
-//
-//            case R.id.nav_warning:
-//                startActivity( new Intent(this, WarningActivity.class));
-//                break;
-//
-//
-//            case R.id.nav_information:
-//                startActivity( new Intent(this, InformationActivity.class));
-//                break;
-//
-//            case R.id.nav_additional:
-//                startActivity( new Intent(this, AdditionalActivity.class));
-//                break;
-//
-//            case R.id.nav_traffic:
-//                startActivity( new Intent(this, TrafficSignalActivity.class));
-//                break;
-//
-//            case R.id.nav_logout:
-//
-//
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new hello()).commit();
-//                break;
-//
-//
-//        }
-//
-//
-//        return true;
-//    }
+
+        }
+
+        return true;
+    }
+
+
+
 }
