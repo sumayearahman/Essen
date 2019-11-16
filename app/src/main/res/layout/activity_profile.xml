@@ -7,10 +7,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".Profile">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbar1"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="@color/colorPrimary"
@@ -21,27 +21,70 @@
         app:theme="@style/ThemeOverlay.AppCompat.Dark"
         app:titleTextColor="@color/colorPrimaryDark">
 
-        <ImageButton
-
-            android:id="@+id/search"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_gravity="start"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_arrow_back" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="profile"
-            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:fontFamily="serif-monospace"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="25sp" />
+            android:textSize="40sp" />
+
 
 
     </androidx.appcompat.widget.Toolbar>
 
 
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_below="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:tabSelectedTextColor="@android:color/black"
+        app:tabTextColor="#5400ACC1"
+        >
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textAllCaps="false"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textAllCaps="false"/>
+
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+
+        android:id="@+id/viewPager"
+        android:layout_below="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/z">
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/nav_view">
+
+    </FrameLayout>
 
 
 </RelativeLayout>

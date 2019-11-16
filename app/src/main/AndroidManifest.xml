@@ -14,13 +14,26 @@
         </activity>
         <activity android:name=".Test"></activity>
         <activity android:name=".Res_Detail">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".Profile">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SearchActivity" />
+        <activity android:name=".MyReservation"></activity>
+        <activity android:name=".Settings"></activity>
+        <activity android:name=".Rate"></activity>
+        <activity android:name=".TermOfUse"></activity>
+        <activity android:name=".AboutUs"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

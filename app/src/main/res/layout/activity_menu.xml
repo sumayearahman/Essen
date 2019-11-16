@@ -49,7 +49,7 @@
 
 
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view1"
+        android:id="@+id/nav_view"
         android:layout_width="420dp"
         android:layout_height="match_parent"
         android:background="#F8F9FA"

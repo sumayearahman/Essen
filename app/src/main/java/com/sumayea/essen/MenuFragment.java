@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.core.view.GravityCompat;
@@ -24,55 +25,55 @@ public class MenuFragment extends Fragment implements NavigationView.OnNavigatio
         View view = inflater.inflate(R.layout.activity_menu, container, false);
 
         navigationView = view.findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener)getFragmentManager());
-//
+        navigationView.setNavigationItemSelectedListener(this);
+
+
 
         return view;
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        switch (menuItem.getItemId()) {
+
+        switch (menuItem.getItemId()){
 
             case R.id.nav_profile:
                 Intent intent = new Intent(getActivity(), Profile.class);
                 startActivity(intent);
-
                 break;
 
-//            case R.id.nav_reservation:
-//                intent = new Intent(getActivity(), MyReservation.class);
-//                break;
-//
-//
-//            case R.id.nav_settings:
-//                intent = new Intent(getActivity(), Settings.class);
-//
-//                break;
-//
-//
-//            case R.id.nav_rate:
-//                intent = new Intent(getActivity(), Rate.class);
-//
-//                break;
-//
-//
-//            case R.id.nav_help:
-//                intent = new Intent(getActivity(), TermOfUse.class);
-//
-//                break;
-//
-//            case R.id.nav_about:
-//                intent = new Intent(getActivity(), AboutUs.class);
-//
-//                break;
-//
+
+            case R.id.nav_reservation:
+                intent = new Intent(getActivity(), MyReservation.class);
+                startActivity(intent);
+                break;
+
+            case R.id.nav_settings:
+                intent = new Intent(getActivity(), Settings.class);
+                startActivity(intent);
+                break;
+
+            case R.id.nav_rate:
+                intent = new Intent(getActivity(),Rate.class);
+                startActivity(intent);
+                break;
+
+            case R.id.nav_help:
+                intent = new Intent(getActivity(), TermOfUse.class);
+                startActivity(intent);
+                break;
+
+
+            case R.id.nav_about:
+                intent = new Intent(getActivity(), AboutUs.class);
+                startActivity(intent);
+                break;
+
 
         }
 
-        return true;
+        return false;
     }
-
 
 
 }
